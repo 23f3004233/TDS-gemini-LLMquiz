@@ -3,10 +3,11 @@ Dynamic package installer for adding dependencies at runtime
 """
 import asyncio
 import subprocess
+from typing import List
 from langchain_core.tools import tool
 
 @tool
-async def add_dependencies(packages: list) -> str:
+async def add_dependencies(packages: List[str]) -> str:
     """
     Install Python packages dynamically using pip.
     Useful when quiz tasks require specific libraries.
